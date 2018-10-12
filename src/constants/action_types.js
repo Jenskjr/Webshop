@@ -1,0 +1,16 @@
+export const FAVITEM_ADD = "FAVITEM_ADD"
+export const FAVITEM_REMOVE = "FAVITEM_REMOVE"
+export const BASKET_ITEM_ADD = "ITEM_ADD"
+export const BASKET_ITEM_REMOVE = "BASKET_ITEM_REMOVE"
+export const ITEM_SORT = "ITEM_SORT"
+export const ITEM_SEARCH = "ITEM_SEARCH"
+export const ITEM_CLEAR_SEARCH = "ITEM_CLEAR_SEARCH"
+export const BASKET_SHOW = "BASKET_SHOW"
+export const BASKET_CLOSE = "BASKET_CLOSE"
+export const FAV_SHOW = "FAV_SHOW"
+export const FAV_CLOSE = "FAV_CLOSE"
+
+
+export const FETCH_DATA_START = "FETCH_DATA_START";
+export const FETCH_DATA_RECEIVE = "FETCH_DATA_RECEIVE";
+export const FETCH_DATA_FAIL = "FETCH_DATA_FAIL";
