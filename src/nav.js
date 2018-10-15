@@ -1,23 +1,7 @@
 import React from "react"
 
-const styles = {
-    searchForm: {
-        display: 'inline'
-    },
-    searchInput: { 
-        width: 320,
-        padding: 0,
-        height: 32,
-        margin: 0,
-        marginTop: 10,
-        marginBottom: 10,
-        marginRight: 10,
-        borderRadius: 4    
-    }
-}
 
 class Nav extends React.Component {
-
     handleSearchSubmit = (event) => {
       	event.preventDefault()
         this.props.searchItems(event)
@@ -28,7 +12,6 @@ class Nav extends React.Component {
     }
 
     handleShowFav = () => {
-        console.log ("hanldeShowFav")
         this.props.showFav()
     }
 
@@ -38,8 +21,8 @@ class Nav extends React.Component {
                 <nav className ="navbar navbar-dark bg-dark border fixed-top">
                     <div className="container">
                         <div className="navbar-header">
-                            <form className="form-inline" style={styles.searchForm} role="search" onSubmit={this.handleSearchSubmit}>
-                                <input  className="form-control border-light m-2 p-2" style={styles.searchInput} type="text" name="searchString" placeholder="Search" />
+                            <form className="form-inline" style={{display: "inline"}} role="search" onSubmit={this.handleSearchSubmit}>
+                                <input  className="form-control border-light m-2 p-2" type="text" name="searchString" placeholder="Search" />
                                 <input style={{cursor: "pointer"}} className="btn bg-dark btn-outline-light m-2 text-light rounded" type="submit" value="Submit"/>
                              </form>
                             <button style={{cursor: "pointer"}} className="btn bg-dark btn-outline-light m-2 text-light rounded" onClick={this.props.clearSearchItems}>
