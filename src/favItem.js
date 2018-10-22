@@ -19,8 +19,8 @@ class FavItem extends React.Component {
                     <div className="">{this.props.name} </div>
                     <div className="">{this.props.tagline} </div>
                     <div className="">Price: {this.props.price} €</div>
-                    <button className="btn-success mt-2" onClick={this.handleAddItem}>Add to card</button>
-                    <button className="btn-danger mt-2 mb-4" onClick={this.handleRemoveFavItem}>Remove item</button>
+                    <button style={{cursor: "pointer"}} className="btn-success mt-2" onClick={this.handleAddItem}>Add to card</button>
+                    <button style={{cursor: "pointer"}} className="btn-danger mt-2 mb-4" onClick={this.handleRemoveFavItem}>Remove item</button>
                  </div>
              </div>
             )

@@ -10,7 +10,10 @@ class ItemList extends React.Component {
                 {/* Search Results*/}
                 {this.props.searchResultList.length > 0?                 
                     <div className="container">
-                        <h3 className="mt-4 mb-2">Search Results</h3>  
+                        <h3 className="text-center mb-4">Search Results</h3>  
+                        <div className="text-primary mb-4" style={{cursor: "pointer"}} onClick={this.props.clearSearchItems}>
+                            X Clear search
+                        </div>
                         <div className="d-flex flex-wrap border">  
                                     
                         <SearchResult   addItem={this.props.addItem} 
@@ -18,13 +21,22 @@ class ItemList extends React.Component {
                                         activeSearch={this.props.activeSearch} 
                                         searchResultList = {this.props.searchResultList}/> 
                         </div>
-                    </div>:
+                        
+                    </div>
+                    :
                     <span></span>
                 }
 
                 {this.props.searchResultList.length === 0 && this.props.activeSearch === true? 
-                    <p className="container padding">No search items found</p>:
-                    <span></span>}  
+                    <div className="container">
+                        <div className="text-primary mb-4" style={{cursor: "pointer"}} onClick={this.props.clearSearchItems}>
+                            X Clear search
+                        </div>
+                        <p>No search items found</p>
+                    </div>:
+                    <span></span>
+                    
+                }  
            
                 {/*Item list*/}
                 {this.props.activeItems === true?

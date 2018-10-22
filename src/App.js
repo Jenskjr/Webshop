@@ -20,9 +20,11 @@ import { connect } from "react-redux"
 
 class App extends React.Component {
 
-    componentDidMount() {
+    componentDidMount = () => {
         this.props.updateShopItemList()
     } 
+
+    
 
     render() {
         return (

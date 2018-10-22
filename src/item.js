@@ -28,8 +28,8 @@ class Item extends React.Component {
                             <h4 className="mt-2">{this.props.price} €</h4>
                         </div>
                         <div className="card-text mt-2 mb-2">
-                            <button className="btn-success w-100 mb-2" style={{cursor: "pointer"}} onClick={this.handleAddItem}>Add to cart</button>   
-                            <button className="btn-primary w-100 mt-2" style={{cursor: "pointer"}} onClick={this.handleAddFavItem}>Add to favorites</button>   
+                            <button className="btn btn-outline-success w-100 mb-2" style={{cursor: "pointer"}} onClick={this.handleAddItem}>Add to cart</button>   
+                            <button className="btn btn-outline-primary w-100 mt-2" style={{cursor: "pointer"}} onClick={this.handleAddFavItem}>Add to favorites</button>   
                         </div>
                     </div>
                 </div>

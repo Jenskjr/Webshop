@@ -16,7 +16,7 @@ class BasketItem extends React.Component {
                     <span>{this.props.name} </span>
                     <div>{this.props.tagline} </div>
                     <div>Price: {this.props.price} €</div>
-                    <button className="btn-danger mr-2 mb-4 mt-2" onClick={this.handleRemoveItem}>Remove item</button>
+                    <button style={{cursor: "pointer"}} className="btn-danger mr-2 mb-4 mt-2" onClick={this.handleRemoveItem}>Remove item</button>
                  </div>
             </div>
             )

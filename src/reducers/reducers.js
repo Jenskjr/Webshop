@@ -14,11 +14,11 @@ import {BASKET_ITEM_ADD,
 		} from '../constants/action_types'
 
 
-const defaultItems = {
-	punkAPIBeers: [
+const initialState = {
+    punkAPIBeers: [
 		{id: 1001, name: "Buzz", tagline: "A Real Bitter Experience", price: 10, image_url: "https://images.punkapi.com/v2/keg.png"}, 
 		{id: 1002, name: "Trashy Blond", tagline: "You Know You Shouldn't", price: 10, image_url: "https://images.punkapi.com/v2/2.png"},
-    {id: 1003, name: "Avery Brown Dredge", tagline: "Bloggers' Imperial Pilsner", price: 10, image_url: "https://images.punkapi.com/v2/keg.png"}
+        {id: 1003, name: "Avery Brown Dredge", tagline: "Bloggers' Imperial Pilsner", price: 10, image_url: "https://images.punkapi.com/v2/keg.png"}
 	],
 	basketItems: [],
 	favItems: [],
@@ -30,8 +30,10 @@ const defaultItems = {
     activeBasketItems: false
 }
 
-const rootReducer = (state = defaultItems, action) => {
-  
+
+const rootReducer = (state = initialState, action) => {
+    
+    
     if (action.type === BASKET_SHOW){
         return Object.assign ({}, state, { 
             activeBasketItems: true,
@@ -87,12 +89,15 @@ const rootReducer = (state = defaultItems, action) => {
 
 	if (action.type === BASKET_ITEM_ADD && action.itemID != null) {
 		
-		return Object.assign({}, state, {
+		const basketItems = Object.assign({}, state, {
             basketItems: [
                 ...state.basketItems,
                 ...state.punkAPIBeers.filter(item => item.id === action.itemID)
             ]
-        })
+         })
+
+        return basketItems    
+       
 	}
 
 	if (action.type === FAVITEM_ADD && action.itemID != null) {
@@ -167,7 +172,8 @@ const rootReducer = (state = defaultItems, action) => {
 	if (action.type === FETCH_DATA_FAIL){
         console.log ("Reducer: FETCH_DATA_FAIL")
 	}
- 
+    
+
   	return state;
 }
 

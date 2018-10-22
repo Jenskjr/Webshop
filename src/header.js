@@ -6,8 +6,8 @@ class Header extends React.Component {
 	render () {
 		return (
 				<div>
-					<header>
-                    	<div className="container text-center pb-4" style={{paddingTop: "160px"}}>
+					<header className="bg-warning">
+                    	<div className="container text-center pb-4 pt-4">
                     		<h1>PunkAPI Beer Shop</h1>
                             <a href="https://punkapi.com/">https://punkapi.com</a>
                     	</div>  
@@ -20,6 +20,9 @@ class Header extends React.Component {
                                 		showBasket={this.props.showBasket}
                                 		showFav={this.props.showFav}   />
                 	</header> 
+                     <div className="container text-center mt-4 mb-4 font-weight-bold">
+                                 <label className="label">{this.props.dataStart === true? "Loading ...": ""}</label>
+                    </div>
 				</div>
 			)
 	}

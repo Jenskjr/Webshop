@@ -8,7 +8,7 @@ const styles = {
     basketItemList: {
         zIndex: "2",  
         position: "fixed", 
-        top: "100px", 
+        top: "0px", 
         width: "400px",
         padding: "30px",
         maxHeight: "500px",  
